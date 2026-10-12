@@ -1,15 +1,15 @@
 schema_version: 1
 
 context:
-  version: "2.0.0"
+  version: "2.0.1"
 
 package:
   name: pythoncdt
   version: ${{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/source/p/pythoncdt/pythoncdt-${{ version }}.tar.gz
-  sha256: 63a3e09bbe0dab1ea6a82d1d665ea764d2c8d03f597ca1d26f3f61017857e1e9
+  url: https://pypi.org/packages/source/p/pythoncdt/pythoncdt-${{ version }}.tar.gz
+  sha256: ed9165cf93cbbfec74ac5421001443a3ecbcaae67adff0660e4eb5c5c4f11aa1
 
 build:
   number: 0
@@ -55,13 +55,9 @@ about:
   homepage: https://github.com/artem-ogre/PythonCDT
   summary: 'Python bindings for CDT: constrained Delaunay triangulation'
   license: MPL-2.0 AND BSD-3-Clause AND Apache-2.0 WITH LLVM-exception
-  # CDT is bundled as source; its predicates.h is BSD-3-Clause and
-  # portable_nth_element.hpp comes from LLVM's libc++
   license_file:
     - LICENSE
-    - CDT/CDT/LICENSE
-    - LICENSE-predicates.txt
-    - LICENSE-LLVM.txt
+    - CDT/CDT/LICENSE*
   repository: https://github.com/artem-ogre/PythonCDT
 
 extra:
